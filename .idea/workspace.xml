@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be161174-6dc5-4627-9c91-5bd016760710" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegisterEvents.php" afterPath="$PROJECT_DIR$/RegisterEvents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegisterTeamEvents.php" afterPath="$PROJECT_DIR$/RegisterTeamEvents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contest.html" afterPath="$PROJECT_DIR$/contest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/contestRegister.js" afterPath="$PROJECT_DIR$/js/contestRegister.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/contestTeamRegister.js" afterPath="$PROJECT_DIR$/js/contestTeamRegister.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/js.js" afterPath="$PROJECT_DIR$/js/js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/register.js" afterPath="$PROJECT_DIR$/js/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/js/register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
-              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="49" />
+              <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -49,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contestRegister.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contestRegister.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/contestRegister.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
               <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseInfo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/DatabaseInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -73,7 +72,17 @@
         <entry file="file://$PROJECT_DIR$/js/contestTeamRegister.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="107" column="44" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="107" selection-end-column="44" />
+              <caret line="107" column="44" lean-forward="false" selection-start-line="102" selection-start-column="13" selection-end-line="107" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -111,6 +120,8 @@
         <option value="$PROJECT_DIR$/js/contestTeamRegister.js" />
         <option value="$PROJECT_DIR$/RegisterEvents.php" />
         <option value="$PROJECT_DIR$/js/contestRegister.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/database/DatabaseInfo.php" />
       </list>
     </option>
   </component>
@@ -167,7 +178,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,7 +271,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15817000" />
+    <option name="totallyTimeSpent" value="16983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="44" width="1301" height="704" extended-state="0" />
@@ -308,31 +319,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6225">
-          <caret line="415" column="43" lean-forward="false" selection-start-line="383" selection-start-column="28" selection-end-line="415" selection-end-column="43" />
-          <folding>
-            <element signature="e#28091#28097#0" expanded="true" />
-            <element signature="e#28097#28103#0" expanded="true" />
-            <element signature="e#28103#28109#0" expanded="true" />
-            <element signature="e#28245#28252#1" expanded="true" />
-            <element signature="e#29001#29007#0" expanded="true" />
-            <element signature="e#29007#29013#0" expanded="true" />
-            <element signature="e#29013#29019#0" expanded="true" />
-            <element signature="e#29203#29210#1" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#29712#29718#0" expanded="true" />
-            <element signature="e#29718#29724#0" expanded="true" />
-            <element signature="e#29786#29792#0" expanded="true" />
-            <element signature="e#30446#30452#0" expanded="true" />
-            <element signature="e#30452#30458#0" expanded="true" />
-            <element signature="e#30458#30464#0" expanded="true" />
-            <element signature="e#30648#30655#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -698,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/contest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -817,7 +795,7 @@
     <entry file="file://$PROJECT_DIR$/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
-          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="49" />
+          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -841,7 +819,7 @@
     <entry file="file://$PROJECT_DIR$/js/contestTeamRegister.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="107" column="44" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="107" selection-end-column="44" />
+          <caret line="107" column="44" lean-forward="false" selection-start-line="102" selection-start-column="13" selection-end-line="107" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -850,6 +828,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/DatabaseInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
         </state>
       </provider>
