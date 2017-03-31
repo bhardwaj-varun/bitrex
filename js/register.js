@@ -1,10 +1,7 @@
 $(document).ready(function () {
+
    $(document).on('click','#submit-register',function (e) {
        e.preventDefault();
-       var regtype=1;
-       var style='logo on white';
-       var isISC=$("#isc").is(':checked') ? 1 : 0;
-       var size=$('#register-tshirt-size').val();
        var info={
                     name:$('#register-name').val(),
                     email:$('#register-email').val(),
@@ -12,15 +9,15 @@ $(document).ready(function () {
                     college:$('#register-college').val(),
                     university:$('#register-university').val(),
                     course:$('#register-course').val(),
-                    regtype:regtype,
+                    regtype:$("#register-include-tshirt").is(':checked')?2:1,
                     address:$('#register-address').val(),
-                    style:style ,
-                    size:size,
-                    isISC:isISC
+                    style:$("#tshirt-div").find($("input:checked")).val(),
+                    size:$('#register-tshirt-size').val(),
+                    isISC:$("#isc").is(':checked') ? 1 : 0
        };
        info=JSON.stringify(info);
-      // console.log(info);
-       //registerFest(info);
+       //console.log(info);
+       registerFest(info);
    })
 });
 var registerFest = function(info){
@@ -30,14 +27,17 @@ var registerFest = function(info){
         data:info,
         async:true,
         success:function(response){
-            //alert(response);
-            console.log(response);
-            /* jsondata=$.parseJSON(response);
-             if(jsondata.result === 0){
-             alert('Available');
+            //console.log(response);
+             jsondata=$.parseJSON(response);
+             if(jsondata.msg){
+                 if($("#isc").is(':checked'))
+                     $("#modal-success").modal('toggle');
+                 else
+                     $("#modal-payment").modal('toggle');
              }else{
-             alert('Already Taken');
-             }*/
+                $("#error-msg").html(jsondata.err);
+                 $("#modal-err").modal('toggle');
+             }
         },
         error: function(response, status, errorThrown) {
             console.log(response+status);

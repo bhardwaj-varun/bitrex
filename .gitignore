@@ -3,4 +3,3 @@ database/DatabaseInfo.php
 debug.*
 .idea
 .idea/*
-Register.php

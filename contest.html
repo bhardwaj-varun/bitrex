@@ -152,20 +152,21 @@
                             </div>
 
                             <div class="col-md-12 py-4">
-                                <p id="secondPara">This event consist of questions for which you have to tell which algorithm can be used to solve it.It would Website Based with question on the website and you have to submit the answers with your email id. The competition is scheduled to be on <b>9th April from 6pm to 11pm</b>.</p>
+                                <p >This event consist of questions for which you have to tell which algorithm can be used to solve it.It would Website Based with question on the website and you have to submit the answers with your email id. The competition is scheduled to be on <b>9th April from 6pm to 11pm</b>.</p>
                             </div>
 
                         </div>
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 10px;margin-bottom: 20px;">
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                                <small><span id="warnings" style="color:red">PAsswords not mthfc</span></small>
                                 </h3>
                                 <form class="form-inline" style="margin-top: 30px;margin-bottom: 20px;">
-                                    <label class="sr-only" for="email-algoholic">Email</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 col-md-5">
-                                        <input type="text" class="form-control" id="email-algoholic" placeholder="Email (Used at the time of Registration)">
 
+                                    <label class="sr-only" for="email-algoholic">Email</label>
+
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 col-md-5">
+
+                                        <input type="email" aria-describedby="emailHelp" class="form-control" id="email-algoholic" placeholder="Email (Used at the time of Registration)">
                                     </div>
                                     <button type="submit" id="submit-algoholic" class="btn btn-primary">Submit</button>
                                 </form>
@@ -189,7 +190,7 @@
                                 </blockquote>
                             </div>
                             <div class="col-md-12 py-4">
-                                <p id="secondPara">
+                                <p >
 
                                 </p>
                             </div>
@@ -201,21 +202,21 @@
                                     <label for="quiz-team-name" class="col-2 col-form-label"><b>Team Name</b></label>
                                     <div class="input-group col-10">
                                         <input class="form-control" type="text" placeholder="Name of the team" id="quiz-team-name">
-                                        <span class="input-group-addon"><i class="fa fa-check" aria-hidden="true" ></i></span>
+                                        <!--<span class="input-group-addon"><i class="fa fa-check" aria-hidden="true" ></i></span>-->
                                     </div>
                                 </div>
                                 <div class="form-group row" style="margin-top: 20px;">
                                     <label for="quiz-email-1" class="col-2 col-form-label">Participant 1</label>
                                     <div class="input-group col-10">
-                                        <input class="form-control" type="text" placeholder="Email ID" id="quiz-email-1">
-                                        <span class="input-group-addon "><i class="fa fa-circle-o-notch fa-spin"></i></span>
+                                        <input class="form-control" type="email" aria-describedby="emailHelp" placeholder="Email ID" id="quiz-email-1">
+                                        <!--<span class="input-group-addon "><i class="fa fa-circle-o-notch fa-spin"></i></span>-->
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="quiz-email-2" class="col-2 col-form-label">Participant 2</label>
                                     <div class="input-group col-10 ">
                                         <input class="form-control" type="text" placeholder="Email ID" id="quiz-email-2">
-                                        <span class="input-group-addon"><i class="fa fa-close"></i></span>	
+                                        <!--<span class="input-group-addon"><i class="fa fa-close"></i></span>-->
                                     </div> 
                                   
                                 </div> 
@@ -678,7 +679,29 @@
     </div>
 </div>
 
+        <div class="modal" id="modal-msg">
+            <div class="modal-dialog modal-basic" role="document">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h5 class="text-center modal-title">&nbsp;</h5>
 
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="text-center" id="text-msg">
+
+                            </div>
+                        </div>
+                        <!--container-->
+                    </div>
+                    <!-- <div class="modal-footer">
+                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                     </div>-->
+                </div>
+            </div>
+        </div>
 
 
 

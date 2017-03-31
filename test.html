@@ -16,30 +16,41 @@ and open the template in the editor.
 
                                         <input type="text" class="form-control form-control-label" id="register-name"
                                                placeholder="Full Name">
-                                        <input type="text" class="form-control" id="register-email"
+                                        <input type="text"  id="register-email"
                                                aria-describedby="emailHelp" placeholder="Email">
-                                        <input type="text" class="form-control" id="register-phone"
+                                        <input type="text"  id="register-phone"
                                                placeholder="Phone No.">
-                                        <input type="text" class="form-control" id="register-university"
+                                        <input type="text"  id="register-university"
                                                placeholder="University">
-                                        <input type="text" class="form-control" id="register-college"
+                                        <input type="text"  id="register-college"
                                                placeholder="College/Institute/Faculty">
-                                        <input class="form-control" id="register-course"
+                                        <input  id="register-course"
                                                placeholder="Course (B.Sc/M.Sc/MCA/B.Tech/etc)"/>
-                                        <input type="checkbox" id="isc" class="form-check-input">
+                                             <textarea  id="register-address" rows="3" placeholder="Address"></textarea>
+                                        <input type="checkbox" id="isc" >
                                             Are you a student of Institute of Science, Banaras Hindu University ?
-                                        <input class="form-control" id="tshirt-info"
-                                               placeholder="tshirt info"/>
-                                         <textarea class="form-control" id="register-address"
-                                                   placeholder="address"></textarea>
-                                          <select id="register-tshirt-size">
-                                            <option selected="selected" disabled="disabled">T-shirt Size</option>
-                                            <option value="S">Small</option>
-                                            <option value="M">Medium</option>
-                                            <option value="L">Large</option>
-                                            <option value="XL">XL</option>
-                                            <option value="XXL">XXL</option>
-                                          </select>
+                                        <input type="checkbox" id="register-include-tshirt" checked="checked">
+                                        Include A T-shirt
+                                        <div id="tshirt-div">
+                                            <input type="radio" name="options" id="option1" value="text on black"
+                                                    checked="checked"/>text on black
+
+                                            <input type="radio" name="options" id="option2" value="logo on black"
+                                                 />logo on black
+
+                                            <input type="radio" name="options" id="option3" value="logo on white"
+                                                  />logo on white
+                                            <input type="radio" name="options" id="option4" value="text on white"
+                                                  />text on white
+                                        </div>
+
+                                    <select class="form-control text-center" id="register-tshirt-size">
+                                        <option value="S">Small</option>
+                                        <option value="M">Medium</option>
+                                        <option value="L">Large</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
                                             <button id="submit-register">Register</button>
                                         </pre>
 

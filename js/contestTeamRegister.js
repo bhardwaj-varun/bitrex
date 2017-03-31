@@ -98,19 +98,22 @@ var registerTeamEvent = function (info) {
         data: info,
         async: true,
         success: function (response) {
-            //alert(response);
-            console.log(response);
-            /* jsondata=$.parseJSON(response);
-             if(jsondata.result === 0){
-             alert('Available');
+            //console.log(response);
+            jsondata=$.parseJSON(response);
+             if(jsondata.msg){
+                 $("#text-msg").html(jsondata.msg);
              }else{
-             alert('Already Taken');
-             }*/
+                 $("#text-msg").html(jsondata.err);
+             }
+            $("#modal-msg").modal('toggle');
         },
         error: function (response, status, errorThrown) {
             console.log(response + status);
             alert(response); //result from server if error occured
             alert(errorThrown);  //error code
+        },
+        progress:function(e){
+
         },
         cache: false,
         contentType: false,

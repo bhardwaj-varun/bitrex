@@ -52,7 +52,7 @@ class RegisterEvents implements Constants {
         } else if ($this->registerResult['row_count'] != 1) {
             $msg = array('err' => 'Some Error Occured.');
         }else if ($this->registerResult['row_count'] == 1){
-            $msg = array('msg'=> $this->registerResult);
+            $msg = array('msg'=> 'Successfully registered for event');
         }
         
         echo json_encode($msg);

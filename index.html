@@ -38,7 +38,7 @@
 <div id="particles-js"></div>
 <div class="jumbotron panel-custom" id="title">
     <h1 class="display-1 text-center bitlow-font hidden-sm-down" id="title-text">BITREX'17</h1>
-    <h1 class="display-5 text-center bitlow-font hidden-md-up visible-sm-down" id="title-text">BITREX'17</h1>
+    <h1 class="display-5 text-center bitlow-font hidden-md-up visible-sm-down" id="title-text ">BITREX'17</h1>
     <p class="lead text-center bitlow-font" id="title-moto">SMASH IT TO BITS</p>
     <hr width="25%" color="white">
     <div class="sub_text">
@@ -152,34 +152,34 @@
                         <form>
                             <fieldset>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-label" id="exampleInputPassword1" placeholder="Full Name">
+                                    <input type="text" class="form-control form-control-label" id="register-name" placeholder="Full Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                    <input type="email" class="form-control" id="register-email" aria-describedby="emailHelp" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="number" maxlength="10" class="form-control" id="register-phone"  placeholder="Mobile No.">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                                    <input type="text" class="form-control" id="register-university" placeholder="University">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="University">
+                                    <input type="text" class="form-control" id="register-college" placeholder="College/Institute/Faculty">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="College/Institute/Faculty">
+                                    <input type="text" class="form-control" id="register-course"  placeholder="Course(B.Sc/BCA/M.Sc/MCA/B.Tech/etc)">
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="exampleInputPassword1" rows="3" placeholder="Address"></textarea>
+                                    <textarea class="form-control" id="register-address" rows="3" placeholder="Address"></textarea>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        Institute of Science, BHU Student </label>
+                                        <input type="checkbox" class="form-check-input" id="isc">
+                                       Are you a student of Institute of Science, Banaras Hindu University?</label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" checked="checked">
+                                        <input type="checkbox" id="register-include-tshirt" class="form-check-input" checked="checked">
                                         Include A T-shirt </label>
                                 </div>
                             </fieldset>
@@ -191,14 +191,14 @@
                                     <h2 class="text-center">Select T-shirt Style</h2><br><br>
                                     <div class="row">
                                         <div class="col-md-6" style="text-align:center;">
-                                            <input type="radio" name="options" id="option1" style="visibility:hidden;" class="input-hidden">
+                                            <input type="radio" name="options" id="option1" value="text on black" style="visibility:hidden;" class="input-hidden" checked="checked"/>
                                             <label for="option1">
                                                 <img src="img/option1.jpg" alt="" class="img-fluid" style="cursor:pointer;"><br><br>
                                             </label>
 
                                         </div>
                                         <div class="col-md-6" style="text-align:center;">
-                                            <input type="radio" name="options" id="option2" style="visibility:hidden;" class="input-hidden" />
+                                            <input type="radio" name="options" id="option2" value="logo on black" style="visibility:hidden;" class="input-hidden" />
                                             <label for="option2">
                                                 <img src="img/option2.jpg" alt="" class="img-fluid" style="cursor:pointer;"><br><br>
                                             </label>
@@ -207,13 +207,13 @@
 
                                     <div class="row">
                                         <div class="col-md-6" style="text-align:center;">
-                                            <input type="radio" name="options" id="option3" style="visibility:hidden;" class="input-hidden">
+                                            <input type="radio" name="options" id="option3" value="logo on white" style="visibility:hidden;" class="input-hidden">
                                             <label for="option3">
                                                 <img src="img/option3.png" alt="" class="img-fluid" style="cursor:pointer;"><br><br>
                                             </label>
                                         </div>
                                         <div class="col-md-6" style="text-align:center;">
-                                            <input type="radio" name="options" id="option4" style="visibility:hidden;" class="input-hidden">
+                                            <input type="radio" name="options" id="option4" value="text on white" style="visibility:hidden;" class="input-hidden">
                                             <label for="option4">
                                                 <img src="img/option4.png" alt="" class="img-fluid" style="cursor:pointer;"><br><br>
                                             </label>
@@ -221,6 +221,21 @@
 
                                     </div>
                                 </div>
+                                <div class="form-group col-4 offset-md-4 text-center">
+                                    <label for="register-tshirt-size" >T-shirt Size</label>
+                                    <select class="form-control text-center" id="register-tshirt-size">
+                                        <option value="S">Small</option>
+                                        <option value="M">Medium</option>
+                                        <option value="L">Large</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="text-center">
+                            <button class="btn btn-lg btn-primary" id="submit-register">Register</button>
                             </div>
                         </form>
                     </div>
@@ -441,10 +456,86 @@
         </div>
     </div>
 </div>
+<div class="modal" id="modal-success">
+    <div class="modal-dialog modal-basic" role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h5 class="text-center modal-title">&nbsp;&nbsp;&nbsp;</h5>
 
+                <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="text-center">
+                        SuccessFully registered!!!
+                    </div>
+                </div>
+                <!--container-->
+            </div>
+            <!-- <div class="modal-footer">
+                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+             </div>-->
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-payment">
+    <div class="modal-dialog modal-basic" role="document">
+        <div class="modal-content">
+           <div class="modal-header ">
+            <h5 class="text-center modal-title">&nbsp;&nbsp;&nbsp;Yipeeeeeee!!!! You are Successfully Registered! </h5>
 
+                <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="text-center">
+                    <div class="card-deck">
 
+                        <div class="card card-primary ">
 
+                            <img class="img-fluid" src="img/paytm.png" alt="Card image">
+                            <div class="card-block">
+                                <p class="card-text" style="font-size: 25px;">Pay&nbsp;&nbsp;<i class="fa fa-inr"></i>
+                                    &nbsp;200
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!--container-->
+            </div>
+           <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>-->
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-err">
+    <div class="modal-dialog modal-basic" role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h5 class="text-center modal-title">&nbsp;&nbsp;&nbsp;Yipeeeeeee!!!! You are Successfully Registered! </h5>
+
+                <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="text-center" id="error-msg">
+
+                    </div>
+                </div>
+                <!--container-->
+            </div>
+            <!-- <div class="modal-footer">
+                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+             </div>-->
+        </div>
+    </div>
+</div>
 
 <section id="aboutus">
   <div class="panel-custom top-padded">
@@ -482,7 +573,8 @@
       </div>
     </div>
     </section>
-    
+
+
 <div class="bg-primary footer">
     <div class="container">
         <div class="row">
@@ -516,6 +608,7 @@
 <script src="js/app.js"></script>
 <script src="js/js.js"></script>
 <script src="js/contest.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>
 

@@ -92,7 +92,7 @@ class RegisterTeamEvents {
            $msg=array('err'=>'Some database error occured.');
        }
        else{
-           $msg=array('msg'=>"Regsitration Successfull.");
+           $msg=array('msg'=>"Registration Successful.");
        }
            
        echo  json_encode($msg);

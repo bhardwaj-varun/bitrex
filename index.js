@@ -47,7 +47,7 @@ var validate=function(){
 }
 var insertInfo=function(info){
     $.ajax({
-        url:"Register.php",
+        url:"Register-test.phpt.php",
         type:"post",
         data:info,
         async:true,
