@@ -5,16 +5,16 @@ $(document).ready(function () {
        e.preventDefault();
 
        var info={
-                    name:$('#register-name').val(),
-                    email:$('#register-email').val(),
-                    phone:$('#register-phone').val(),
-                    college:$('#register-college').val(),
-                    university:$('#register-university').val(),
-                    course:$('#register-course').val(),
+                    name:$('#register-name').val().trim(),
+                    email:$('#register-email').val().trim(),
+                    phone:$('#register-phone').val().trim(),
+                    college:$('#register-college').val().trim(),
+                    university:$('#register-university').val().trim(),
+                    course:$('#register-course').val().trim(),
                     regtype:$("#register-include-tshirt").is(':checked')?2:1,
-                    address:$('#register-address').val(),
-                    style:$("#tshirt-div").find($("input:checked")).val(),
-                    size:$('#register-tshirt-size').val(),
+                    address:$('#register-address').val().trim(),
+                    style:$("#tshirt-div").find($("input:checked")).val().trim(),
+                    size:$('#register-tshirt-size').val().trim(),
                     isISC:$("#isc").is(':checked') ? 1 : 0
        };
        info=JSON.stringify(info);
@@ -30,7 +30,7 @@ var validateRegForm=function () {
 
     $(document).on('blur','#register-name',function (e) {
         flag=1;
-        var text=$('#register-name').val();
+        var text=$('#register-name').val().trim();
         var result=validateName(text);
         flag &= result ? 1:0;
        // alert(result+' '+flag);
@@ -42,7 +42,7 @@ var validateRegForm=function () {
         }
     });
     $(document).on('blur','#register-email',function (e) {
-        var text=$('#register-email').val();
+        var text=$('#register-email').val().trim();
         var result=validateEmail(text);
         flag &= result ? 1:0;
        // alert(result+' '+flag);
@@ -54,7 +54,7 @@ var validateRegForm=function () {
         }
     });
     $(document).on('blur','#register-phone',function (e) {
-        var text=$('#register-phone').val();
+        var text=$('#register-phone').val().trim();
         var result=validatePhone(text);
         flag &= result ? 1:0;
        // alert(result+' '+flag);
@@ -68,7 +68,7 @@ var validateRegForm=function () {
 
     });
     $(document).on('blur','#register-university',function (e) {
-        var text=$('#register-university').val();
+        var text=$('#register-university').val().trim();
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
@@ -81,7 +81,7 @@ var validateRegForm=function () {
         }
     });
     $(document).on('blur','#register-college',function (e) {
-        var text=$('#register-college').val();
+        var text=$('#register-college').val().trim();
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
@@ -94,7 +94,7 @@ var validateRegForm=function () {
         }
     });
     $(document).on('blur','#register-course',function (e) {
-        var text=$('#register-course').val();
+        var text=$('#register-course').val().trim();
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
@@ -107,7 +107,7 @@ var validateRegForm=function () {
         }
     });
     $(document).on('blur','#register-address',function (e) {
-        var text=$('#register-address').val();
+        var text=$('#register-address').val().trim();
         var result=validateAddress(text);
 
         flag &= result ? 1:0;
