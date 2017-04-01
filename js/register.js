@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $("#modal-err").modal('toggle');    
    $(document).on('click','#submit-register',function (e) {
        e.preventDefault();
        var info={
@@ -17,9 +17,14 @@ $(document).ready(function () {
        };
        info=JSON.stringify(info);
        //console.log(info);
-       registerFest(info);
+     //  registerFest(info);
    })
 });
+var validateRegForm=function () {
+    var flag=1;
+    var nameRes=validateName($('#register-name').val());
+    return flag;
+}
 var registerFest = function(info){
     $.ajax({
         url:"Register.php",

@@ -13,7 +13,7 @@
 interface DatabaseInfo {
     //put your code here
     const db_hostname='localhost';
-    const db_database='';
-    const db_username='';
-    const db_password='';
+    const db_database='bitrex';
+    const db_username='root';
+    const db_password='root';
 }

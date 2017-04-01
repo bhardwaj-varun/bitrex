@@ -12,7 +12,7 @@ $(document).ready(function (e) {
         };
         info = JSON.stringify(info);
         console.log(info);
-        registerTeamEvent(info);
+        //registerTeamEvent(info);
     });
     $(document).on('click', '#submit-hunt', function (e) {
         e.preventDefault();
@@ -91,6 +91,7 @@ $(document).ready(function (e) {
 
 
 });
+
 var registerTeamEvent = function (info) {
     $.ajax({
         url: "RegisterTeamEvents.php",
@@ -113,7 +114,6 @@ var registerTeamEvent = function (info) {
             alert(errorThrown);  //error code
         },
         progress:function(e){
-
         },
         cache: false,
         contentType: false,

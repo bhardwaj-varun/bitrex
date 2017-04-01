@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Bitrex'17 | Contests</title>
         <link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
@@ -107,33 +108,18 @@
                 <div class="row" style="margin-bottom:50px" >
                     <div class="col-md-12">
                         <nav class="nav justify-content-center nav-pills flex-column flex-lg-row custom_pills">
-
                             <a class="nav-link" href="#algoholics" data-toggle="tab" id="1">Algoholics</a>
-
-                            <a class="nav-link" href="#quriosity" data-toggle="tab" id="2">Quriosity</a>        
-
+                            <a class="nav-link" href="#quriosity" data-toggle="tab" id="2">Quriosity</a>
                             <a class="nav-link" href="#scavengers" data-toggle="tab" id="3">Scavengers</a>
-
                             <a class="nav-link" href="#hack" data-toggle="tab" id="4">Hack This Site</a>
                             <a class="nav-link" href="#homepage" data-toggle="tab" id="5">Homepage</a>
-
                             <a class="nav-link" href="#ninja" data-toggle="tab" id="6">Code Ninja</a>
-
                             <a class="nav-link" href="#launchpad" data-toggle="tab" id="7">Launchpad</a>
-
                             <a class="nav-link" href="#gaming" data-toggle="tab" id="8">Adrenaline</a>
-
-
-
                         </nav>            
                     </div>
                 </div>
             </div>    
-
-
-
-
-
             <div class="tab-content" >
                 <div class="tab-pane" id="algoholics">
                     <div class="container">
@@ -147,36 +133,26 @@
                                 <blockquote class="blockquote" style="margin-top: 30px py-2">
                                     Behind every google map,there is a much more complex map that’s the key to our queries but hidden from our view .Likewise,behind every solution to a problem ,there lies an algorithm. For people engrossed in such algorithms, Bitrex gives you the chance to acclaim your majesty through algoholics. Your algorithmic skills would put through our gruesome tests and only if you have a clear understanding of them ,you’ll be declared an algoholic.
                                 </blockquote>
-
-
                             </div>
-
                             <div class="col-md-12 py-4">
                                 <p >This event consist of questions for which you have to tell which algorithm can be used to solve it.It would Website Based with question on the website and you have to submit the answers with your email id. The competition is scheduled to be on <b>9th April from 6pm to 11pm</b>.</p>
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 10px;margin-bottom: 20px;">
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
                                 </h3>
                                 <form class="form-inline" style="margin-top: 30px;margin-bottom: 20px;">
-
                                     <label class="sr-only" for="email-algoholic">Email</label>
-
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 col-md-5">
-
-                                        <input type="email" aria-describedby="emailHelp" class="form-control" id="email-algoholic" placeholder="Email (Used at the time of Registration)">
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0 col-md-5" style="padding-left:0px;">
+                                        <input type="text" class="form-control" id="email-algoholic" placeholder="Email (Used at the time of Registration)">                    
                                     </div>
                                     <button type="submit" id="submit-algoholic" class="btn btn-primary">Submit</button>
                                 </form>
-
-                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="tab-pane" id="quriosity">
                     <div class="container">
                         <div class="row">
@@ -191,41 +167,55 @@
                             </div>
                             <div class="col-md-12 py-4">
                                 <p >
-
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12" style="margin-top: 10px;margin-bottom: 20px;" id="quiz-form-div">
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a></h3>
+                                <div class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="span-err-quiz-team" style="color:red; font-size: 12px; padding-bottom: 8px;"></span>
+                                    </div>
+                                </div>
                                 <div class="form-group row " style="margin-top: 20px;">
                                     <label for="quiz-team-name" class="col-2 col-form-label"><b>Team Name</b></label>
                                     <div class="input-group col-10">
                                         <input class="form-control" type="text" placeholder="Name of the team" id="quiz-team-name">
-                                        <!--<span class="input-group-addon"><i class="fa fa-check" aria-hidden="true" ></i></span>-->
+                                        <span class="input-group-addon"><i id="span-quiz-team"></i></span>
                                     </div>
                                 </div>
-                                <div class="form-group row" style="margin-top: 20px;">
+                                <!-- Span Warning text start -->
+                                <div class="row">
+                                    <div class="col-8 offset-2">
+                                        <span  style="color:red; font-size: 12px; padding-bottom: 8px;"> </span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="quiz-email-1" class="col-2 col-form-label">Participant 1</label>
                                     <div class="input-group col-10">
-                                        <input class="form-control" type="email" aria-describedby="emailHelp" placeholder="Email ID" id="quiz-email-1">
-                                        <!--<span class="input-group-addon "><i class="fa fa-circle-o-notch fa-spin"></i></span>-->
+                                        <input class="form-control" type="text" placeholder="Email ID" id="quiz-email-1">
+                                        <span class="input-group-addon "><i id="span-quiz-email-1" ></i></span>
+                                    </div>                                                                    
+                                </div>
+                                <!-- Span Warning text start -->
+                                <div class="row">
+                                    <div class="col-8 offset-2">
+                                        <span  style="color:red; font-size: 12px; padding-bottom: 8px;"> </span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="quiz-email-2" class="col-2 col-form-label">Participant 2</label>
                                     <div class="input-group col-10 ">
                                         <input class="form-control" type="text" placeholder="Email ID" id="quiz-email-2">
-                                        <!--<span class="input-group-addon"><i class="fa fa-close"></i></span>-->
-                                    </div> 
-                                  
+                                        <span class="input-group-addon"><i id="span-quiz-email-2" class="fa fa-close"></i></span>
+                                    </div>
                                 </div> 
                                 <button type="submit" id="submit-quiz" class="btn btn-primary" style="float: right;">Submit</button>
                             </div>
                         </div>
                     </div>         
                 </div>
-
                 <div class="tab-pane" id="scavengers">
                     <div class="container">
                         <div class="row">
@@ -239,7 +229,7 @@
                                 </blockquote>
                             </div>
                             <div class="col-md-12 py-4">
-                                <p id="secondPara">
+                                <p >
 
                                 </p>
                             </div>
@@ -248,18 +238,39 @@
                             <div class="col-md-12" style="margin-top: 10px;margin-bottom: 20px;" id="hunt-form-div">
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
                                 </h3>
+                                <!-- Span Warning text start -->
+                                
+                                <div  class="row">
+                                    <div class="col-8 offset-2">
+                                        <span  style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;">
                                     <label for="hunt-team-name" class="col-2 col-form-label"><b>Team Name</b></label>
                                     <div class="col-10">
                                         <input class="form-control" type="text" placeholder="Name of the team" id="hunt-team-name">
                                     </div>
                                 </div>
+                                <!-- Span Warning text start -->
+                                
+                                <div  class="row">
+                                    <div class="col-8 offset-2">
+                                        <span  style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;">
                                     <label for="hunt-email-1" class="col-2 col-form-label">Participant 1</label>
                                     <div class="col-10">
                                         <input class="form-control" type="text" placeholder="email-id" id="hunt-email-1">
                                     </div>
                                 </div>
+                                <!-- Span Warning text start -->
+                                
+                                <div  class="row">
+                                    <div class="col-8 offset-2">
+                                        <span style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>
+                                    </div>
+                                </div> 
                                 <div class="form-group row">
                                     <label for="hunt-email-2" class="col-2 col-form-label">Participant 2</label>
                                     <div class="col-10">
@@ -334,12 +345,26 @@
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a></h3><h4>Maximum 3 Participants Allowed</h4>
                                 <button  class = "btn btn-success"id="more_fields" onclick="add_fields();"  >Add Participant</button>&nbsp&nbsp 
                                 <button  class = "btn btn-danger"id="less_fields" onclick="remove_fields();"  style="display: none;">Remove Participant</button>
+                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;" id="firstmember">
                                     <label for="example-text-input" class="col-2 col-form-label"><b>Team Name</b></label>
                                     <div class="col-10">
                                         <input class="form-control" type="text" placeholder="Name of the team" id="homepage-team-name">
                                     </div>
                                 </div>
+                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;" id="firstmember">
                                     <label for="example-text-input" class="col-2 col-form-label">Participant 1</label>
                                     <div class="col-10">
@@ -415,12 +440,26 @@
                                 <h3><a>Register Now&nbsp&nbsp&nbsp<i class="fa fa-arrow-down" aria-hidden="true"></i></a></h3><h4>Maximum 5 Participants Allowed</h4>
                                 <button  class = "btn btn-success" id="l_more_fields" onclick="l_add_fields();"  >Add Participant</button>&nbsp&nbsp
                                 <button  class = "btn btn-danger" id="l_less_fields" onclick="l_remove_fields();" style="display: none;">Remove Participant</button>
+                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;" >
                                     <label for="example-text-input" class="col-2 col-form-label"><b>Team Name</b></label>
                                     <div class="col-10">
                                         <input class="form-control" type="text" placeholder="Name of the team" id="launch-team-name">
                                     </div>
                                 </div>
+                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                 <div class="form-group row" style="margin-top: 20px;" id="lfirstmember">
                                     <label for="example-text-input" class="col-2 col-form-label">Participant 1</label>
                                     <div class="col-10">
@@ -519,36 +558,92 @@
                                                 <img src="img/csgo.jpg">&nbsp&nbsp&nbsp
                                                 <!--<input type="button"  class = "btn btn-success" id="cs_more_fields" onclick="cs_add_fields();" value="Add Participant"  />&nbsp&nbsp
                                                 <input type="button" class = "btn btn-danger" id="cs_less_fields" onclick="cs_remove_fields();" value="Remove Participant" style="display: none;"/>-->
+                                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
+                                        <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="csgo-team-name" class="col-2 col-form-label"><b>Team Name</b></label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="Name of the team" id="csgo-team-name">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
+                                                <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="csgo-email-1" class="col-2 col-form-label">Participant 1</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="csgo-email-1">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;" >
                                                     <label for="csgo-email-2" class="col-2 col-form-label">Participant 2</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="csgo-email-2">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;" >
                                                     <label for="csgo-email-3" class="col-2 col-form-label">Participant 3</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="csgo-email-3">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;" >
                                                     <label for="csgo-email-4" class="col-2 col-form-label">Participant 4</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="csgo-email-4">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="csgo-email-5" class="col-2 col-form-label">Participant 5</label>
                                                     <div class="col-10">
@@ -570,42 +665,91 @@
                                                 <img src="img/cod.jpg">&nbsp&nbsp&nbsp
                                                 <!--<input type="button"  class = "btn btn-success" id="cod_more_fields" onclick="cod_add_fields();" value="Add Participant"  />&nbsp&nbsp
                                                 <input type="button" class = "btn btn-danger" id="cod_less_fields" onclick="cod_remove_fields();" value="Remove Participant" style="display: none;"/>-->
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;" >
                                                     <label for="cod-team-name" class="col-2 col-form-label"><b>Team Name</b></label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="Name of the team" id="cod-team-name">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="cod-email-1" class="col-2 col-form-label">Participant 1</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="cod-email-1">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="cod-email-2" class="col-2 col-form-label">Participant 2</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="cod-email-2">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;" >
                                                     <label for="cod-email-3" class="col-2 col-form-label">Participant 3</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="cod-email-3">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="cod-email-4" class="col-2 col-form-label">Participant 4</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="cod-email-4">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="cod-email-5" class="col-2 col-form-label">Participant 5</label>
                                                     <div class="col-10">
                                                         <input class="form-control" type="text" placeholder="email-id" id="cod-email-5">
                                                     </div>
                                                 </div>
+                                       <!-- Span Warning text start -->
+                                
+                                <div id="span-warning-text" class="row">
+                                    <div class="col-8 offset-2">
+                                        <span id="warnings" style="color:red; font-size: 12px; padding-bottom: 8px;"> Warning! Email Does not exist</span>      
+                                    </div>
+                                </div> 
                                                 <div class="form-group row" style="margin-top: 20px;">
                                                     <label for="cod-email-6" class="col-2 col-form-label">Participant 6</label>
                                                     <div class="col-10">
@@ -679,29 +823,7 @@
     </div>
 </div>
 
-        <div class="modal" id="modal-msg">
-            <div class="modal-dialog modal-basic" role="document">
-                <div class="modal-content">
-                    <div class="modal-header ">
-                        <h5 class="text-center modal-title">&nbsp;</h5>
 
-                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="text-center" id="text-msg">
-
-                            </div>
-                        </div>
-                        <!--container-->
-                    </div>
-                    <!-- <div class="modal-footer">
-                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                     </div>-->
-                </div>
-            </div>
-        </div>
 
 
 
@@ -710,7 +832,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="js/contest.js"></script>
-
+<script src="js/checkTeamExists.js"></script>
 <script src="css/form_handling.js"></script>
 
 <!--

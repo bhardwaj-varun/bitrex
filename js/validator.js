@@ -1,28 +1,30 @@
-var regPhone= /^([987]{1}[0-9]{9})$/;
-var regEmail= /^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-var regTeam=  /^([a-zA-Z]{1}[a-zA-Z0-9 ]{2,}\w+)$/;
-var regPlainText=  /[a-z/, A-Z\-0-9]+/;
-var regAddress= /[a-zA-Z ,]/;
-$(document).ready(function(e){
-   $(document).on('click','#submit-register',function(e){
-       e.preventDefault();
-        var text=$('#register-address').val();
-       validateAddress(text);
-   });
-});
+var reg_name=/[a-zA-Z .]/g;
+var reg_email=/^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+var reg_phone=/^([987]{1}[0-9]{9})/g;
+var reg_address=/[a-zA-Z ,\-/]/g;
+var reg_team=/[a-zA-Z0-9_ ]/g;
+var reg_col_uni_course=/[a-zA-Z, .+]/g;
+var validateName=function(text){
+    console.log(reg_name.test(text));
+    return reg_name.test(text);
+};
 var validatePhone=function(text){
-    console.log(regPhone.test(text));
-    return regPhone.test(text);
+    console.log(reg_phone.test(text));
+    return reg_phone.test(text);
 };
 var validateEmail=function(text){
-    console.log(regEmail.test(text));
-    return regEmail.test(text);
+    console.log(reg_email.test(text));
+    return reg_email.test(text);
 };
 var validateTeamName=function(text){
-    console.log(regTeam.test(text));
-    return regTeam.test(text);  
+    console.log(reg_team.test(text));
+    return reg_team.test(text);
 };
 var validateAddress=function(text){
-    console.log(regTeam.test(text));
-    return regAddress.test(text);
-}
+    console.log(reg_address.test(text));
+    return reg_address.test(text);
+};
+var ValidateCollege=function (text) {
+    console.log(reg_col_uni_course.test(text));
+    return reg_col_uni_course.test(text);
+};
