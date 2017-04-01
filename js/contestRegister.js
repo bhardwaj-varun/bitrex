@@ -1,4 +1,5 @@
 $(document).ready(function(e){
+
         $(document).on('click','#submit-algoholic',function(e){
             e.preventDefault();
             var info = { event: "algoholics", email:$("#email-algoholic").val() }

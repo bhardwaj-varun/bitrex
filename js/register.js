@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
    $(document).on('click','#submit-register',function (e) {
        e.preventDefault();
        var info={
@@ -17,7 +16,7 @@ $(document).ready(function () {
        };
        info=JSON.stringify(info);
        //console.log(info);
-       registerFest(info);
+      // registerFest(info);
    })
 });
 var registerFest = function(info){
