@@ -21,9 +21,10 @@ body {
 .bitlow-font {
 	font-family: bitlow;
 }
-#sponsor-image {
+/*#sponsor-image {
 	display: none;
 }
+*/
 #sponsor-placeholder {
 	display: block;
 	font-size: 32px;
