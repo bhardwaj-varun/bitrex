@@ -33,7 +33,7 @@ var validateRegForm=function () {
         var text=$('#register-name').val();
         var result=validateName(text);
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+       // alert(result+' '+flag);
         if(!result){
             $('#register-name-warn').html('Invalid Symbols in Name');
         }
@@ -45,7 +45,7 @@ var validateRegForm=function () {
         var text=$('#register-email').val();
         var result=validateEmail(text);
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+       // alert(result+' '+flag);
         if(!result){
             $('#register-email-warn').html('Invalid Email ID');
         }
@@ -57,7 +57,7 @@ var validateRegForm=function () {
         var text=$('#register-phone').val();
         var result=validatePhone(text);
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+       // alert(result+' '+flag);
         if(!result){
 
             $('#register-phone-warn').html('Invalid Mobile No');
@@ -72,7 +72,7 @@ var validateRegForm=function () {
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+       // alert(result+' '+flag);
         if(!result){
             $('#register-university-warn').html('Invalid Symbols in University Name');
         }
@@ -85,7 +85,7 @@ var validateRegForm=function () {
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+        //alert(result+' '+flag);
         if(!result){
             $('#register-college-warn').html('Invalid Symbols in college Name');
         }
@@ -98,7 +98,7 @@ var validateRegForm=function () {
         var result=ValidateCollege(text);
 
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+        //alert(result+' '+flag);
         if(!result){
             $('#register-course-warn').html('Invalid Symbols in Course Name');
         }
@@ -111,7 +111,7 @@ var validateRegForm=function () {
         var result=validateAddress(text);
 
         flag &= result ? 1:0;
-        alert(result+' '+flag);
+        //alert(result+' '+flag);
         if(!result){
             $('#register-address-warn').html('Invalid Symbols in address Name');
         }
