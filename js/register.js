@@ -28,30 +28,29 @@ var validateRegFormFilled=function () {
 
     var flag=1;
     var text = $('#register-name').val().trim();
-    var result = text.length > 0 && validateName(text);
+    var result =validateName(text);
 
     flag &= result ? 1:0;
     console.log('name : '+flag);
     text = $('#register-email').val().trim();
-    result = text.length > 0 && validateEmail(text);
+    result =validateEmail(text);
     flag &= result ? 1:0;
     console.log('email : '+flag);
     text = $('#register-phone').val().trim();
-    result = validatePhone(text);
+    result = $.isNumeric(text);
     flag &= result ? 1:0;
     console.log('phone : '+flag);
     text = $('#register-university').val().trim();
-    result = text.length > 0 && validateCollege(text);
+    result = validateCollege(text);
     flag &= result ? 1:0;
     console.log('university: '+flag);
     text = $('#register-college').val().trim();
-    result = text.length > 0 && validateCollege(text);
+    result =validateCollege(text);
     flag &= result ? 1:0;
     console.log('college : '+flag);
     text = $('#register-address').val().trim();
-    result = text.length > 0 && validateAddress(text);
+    result = validateAddress(text);
     flag &= result ? 1:0;
-
     console.log('address: '+flag);
     return flag;
 
