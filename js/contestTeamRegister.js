@@ -443,12 +443,12 @@ var registerTeamEvent = function (info) {
         data: info,
         async: true,
         success: function (response) {
-            //console.log(response);
+            console.log(response);
             jsondata=$.parseJSON(response);
              if(jsondata.msg){
-                 $("#text-msg").html(jsondata.msg);
+                 $("#text").html(jsondata.msg);
              }else{
-                 $("#text-msg").html(jsondata.err);
+                 $("#text").html(jsondata.err);
              }
             $("#modal-msg").modal('toggle');
         },
