@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $("#modal-payment").modal('toggle');
     validateRegForm();
    $(document).on('click','#submit-register',function (e) {
        e.preventDefault();
