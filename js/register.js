@@ -41,15 +41,15 @@ var validateRegFormFilled=function () {
     flag &= result ? 1:0;
     console.log('phone : '+flag);
     text = $('#register-university').val().trim();
-    result = validateCollege(text);
+    result = text.length > 0; //validateCollege(text);
     flag &= result ? 1:0;
     console.log('university: '+flag);
     text = $('#register-college').val().trim();
-    result =validateCollege(text);
+    result =text.length > 0;//validateCollege(text);
     flag &= result ? 1:0;
     console.log('college : '+flag);
     text = $('#register-address').val().trim();
-    result = validateAddress(text);
+    result = text.length>0;//validateAddress(text);
     flag &= result ? 1:0;
     console.log('address: '+flag);
     return flag;
