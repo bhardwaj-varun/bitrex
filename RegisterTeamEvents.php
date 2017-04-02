@@ -85,11 +85,8 @@ class RegisterTeamEvents {
    
      public function getJsonResult(){
        $msg=array();
-       if($this->registerEventResult['email_exist']==0){
-           $msg=array('err'=>'Please Register for fest first.');
-       }
-       else if($this->registerEventResult['row_count']!=1){
-           $msg=array('err'=>'Some database error occured.');
+       if($this->registerEventResult['row_count']==0){
+           $msg=array('err'=>'Team Not Registered.');
        }
        else{
            $msg=array('msg'=>"Registration Successful.");
