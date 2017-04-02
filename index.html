@@ -504,11 +504,23 @@
 
 
 <div id="modal-success" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <span style="font-size: 32px; color: green; padding-bottom: 10px;" class="fa fa-check"></span>
+                <h3>Registration Sucessfull !!!</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primaryv" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-reg-err" class="modal fade">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body text-center">
-        <span style="font-size: 32px; color: green; padding-bottom: 10px;" class="fa fa-check"></span>
-        <h3>Registration Sucessfull !!!</h3>
+        <h3>Fill all fields  first</h3>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primaryv" data-dismiss="modal">Close</button>
@@ -542,7 +554,7 @@
                             <img class="img-fluid" src="img/paytm.png" alt="Card image">
                             <div class="card-block">
                                 <p class="card-text" style="font-size: 25px;">Pay&nbsp;&nbsp;<i class="fa fa-inr"></i>
-                                    &nbsp;200
+                                    &nbsp;<span id="cost"></span>
                                 </p>
                             </div>
                         </div>
