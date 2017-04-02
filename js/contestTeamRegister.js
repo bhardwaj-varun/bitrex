@@ -195,7 +195,6 @@ var validateTeamContests=function() {
         }
     });
     $(document).on('blur', '#hunt-email-1', function (e) {
-        alert('hunt-1 blur');
         var text = $('#hunt-email-1').val().trim();
         var result = validateEmail(text);
         flagHunt &= result ? 1 : 0;
