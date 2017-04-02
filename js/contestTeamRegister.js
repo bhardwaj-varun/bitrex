@@ -476,11 +476,15 @@ var checkTeamName = function (info) {
             $('#'+spanIcon).removeClass('fa fa-circle-o-notch fa-spin');
             console.log(response);
             jsondata = $.parseJSON(response);
-            if (jsondata.result === 0) {
+            if(jsondata.msg){
+                $("#text").html(jsondata.msg);
                 $('#'+spanIcon).addClass('fa fa-check');
-            } else {
+            }else{
+                $("#text").html(jsondata.err);
                 $('#'+spanIcon).addClass('fa fa-close');
             }
+            $("#modal-msg").modal('toggle');
+
         },
         error: function (response, status, errorThrown) {
             console.log(response + status);
