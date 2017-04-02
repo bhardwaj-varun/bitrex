@@ -22,6 +22,8 @@ $(document).ready(function (e) {
         //console.log(info);
         if(flagQuiz)
         registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
     $(document).on('click', '#submit-hunt', function (e) {
         e.preventDefault();
@@ -38,6 +40,8 @@ $(document).ready(function (e) {
        // console.log(info);
         if(flagHunt)
             registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
     $(document).on('click', '#submit-csgo', function (e) {
         e.preventDefault();
@@ -55,6 +59,8 @@ $(document).ready(function (e) {
        // console.log(info);
         if(flagCSGO)
             registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
     $(document).on('click', '#submit-cod', function (e) {
         e.preventDefault();
@@ -72,6 +78,8 @@ $(document).ready(function (e) {
        // console.log(info);
         if(flagCOD)
             registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
     $(document).on('click', '#submit-homepage', function (e) {
         e.preventDefault();
@@ -89,6 +97,8 @@ $(document).ready(function (e) {
         console.log(info);
         if(flagHome)
             registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
     $(document).on('click', '#submit-launch', function (e) {
         e.preventDefault();
@@ -106,6 +116,8 @@ $(document).ready(function (e) {
         //console.log(info);
         if(flagLaunch)
             registerTeamEvent(info);
+        else
+            $('#modal-reg-err').modal('toggle');
     });
 
 
@@ -173,7 +185,7 @@ var validateTeamContests=function() {
         var text = $('#hunt-team-name').val().trim();
         var result = validateTeamName(text);
         flagHunt &= result ? 1 : 0;
-        //alert(result+' '+flagQuiz);
+        console.log(result+' '+flagQuiz);
         if (!result) {
             $('#span-hunt-team-warn').html('Invalid Team Name');
         }
@@ -183,10 +195,11 @@ var validateTeamContests=function() {
         }
     });
     $(document).on('blur', '#hunt-email-1', function (e) {
+        alert('hunt-1 blur');
         var text = $('#hunt-email-1').val().trim();
         var result = validateEmail(text);
         flagHunt &= result ? 1 : 0;
-        //alert(result+' '+flagQuiz);
+        console.log(result+' '+flagQuiz);
         if (!result) {
             $('#span-hunt-email1-warn').html('Invalid Email');
         }
@@ -198,7 +211,7 @@ var validateTeamContests=function() {
         var text = $('#hunt-email-2').val().trim();
         var result = validateEmail(text);
         flagHunt &= result ? 1 : 0;
-        //alert(result+' '+flagAlgo);
+        console.log(result+' '+flagQuiz);
         if (!result) {
             $('#span-hunt-email2-warn').html('Invalid Email');
         }
