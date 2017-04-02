@@ -387,21 +387,7 @@ var validateTeamContests=function() {
         }
     });
 
-    var noOfParticipants = $("#launch-form-div").find($("input")).length - 1;
-    for(var i=1;i<=noOfParticipants;i++){
-        $(document).on('blur', '#launch-email-'+i, function (e) {
-            var text = $('#cod-email-'+i).val().trim();
-            var result = validateEmail(text);
-            flagLaunch &= result ? 1 : 0;
-            //alert(result+' '+flagQuiz);
-            if (!result) {
-                $('#span-launch-email'+ i +'-warn').html('Invalid Email');
-            }
-            else {
-                $('#span-launch-email'+ i +'-warn').html('');
-            }
-        });
-    }
+
     $(document).on('blur', '#homepage-team-name', function (e) {
         setSpanID('homepage-team-name');
         cleanStuffs();
@@ -419,23 +405,32 @@ var validateTeamContests=function() {
         }
     });
 
-    var noOfParticipants = $("#homepage-form-div").find($("input")).length - 1;
-    for(var i=1;i<=noOfParticipants;i++){
-        $(document).on('blur', '#homepage-email-'+i, function (e) {
-            var text = $('#homepage-email-'+i).val().trim();
-            var result = validateEmail(text);
-            flagHome &= result ? 1 : 0;
-            //alert(result+' '+flagQuiz);
-            if (!result) {
-                $('#span-homepage-email'+ i +'-warn').html('Invalid Email');
-            }
-            else {
-                $('#span-homepage-email'+ i +'-warn').html('');
-            }
-        });
-    }
-};
 
+};
+var homepageEmail=function(i) {
+       var text = $('#homepage-email-'+i).val().trim();
+     var result = validateEmail(text);
+     flagHome &= result ? 1 : 0;
+     //alert(result+' '+flagQuiz);
+     if (!result) {
+     $('#span-homepage-email'+ i +'-warn').html('Invalid Email for participant-'+i);
+     }
+     else {
+     $('#span-homepage-email'+ i +'-warn').html('');
+     }
+
+}
+var launchEmail=function(i) {
+         var text = $('#launch-email-' + i).val().trim();
+         var result = validateEmail(text);
+         flagLaunch &= result ? 1 : 0;
+         if (!result) {
+         $('#span-launch-email'+i+'-warn').html('Invalid Email for participant-'+i );
+         }
+         else {
+         $('#span-launch-email'+i+'-warn').html('');
+         }
+};
 var registerTeamEvent = function (info) {
     $.ajax({
         url: "RegisterTeamEvents.php",

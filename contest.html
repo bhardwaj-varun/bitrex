@@ -41,23 +41,18 @@
 
     -->
     <nav class="navbar fixed-top navbar-toggleable-sm navbar-inverse" id="navbar_main">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <a href="index.html"><span class="hidden-xs-down navbar-brand bitlow-font smooth-scroll nav_brand_adjust">BITREX'17</span>
-            <img class="hidden-sm-up" src="img/Bitrex_Logo.png" height="20%" width="20%"/></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <img class="hidden-sm-up" src="img/Bitrex_Logo.png" height="10%" width="10%" />
+        <a href="index.html"><span class="hidden-xs-down navbar-brand bitlow-font smooth-scroll nav_brand_adjust">BITREX'17</span></a>
+
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item page-scroll nav-item-custom"><a class="nav-link smooth-scroll" href="#events"></a>
-                </li>
-                <li class="nav-item page-scroll nav-item-custom"><a class="nav-link smooth-scroll"
-                                                                    href="index.html#events">EVENTS</a></li>
-                <li class="nav-item page-scroll nav-item-custom "><a class="nav-link smooth-scroll"
-                                                                     href="index.html#sponsors">SPONSORS</a></li>
+                <li class="nav-item page-scroll nav-item-custom"> <a class="nav-link smooth-scroll"  href="#events"></a> </li>
+                <li class="nav-item page-scroll nav-item-custom"> <a class="nav-link smooth-scroll"  href="index.html#events">EVENTS</a> </li>
+                <li class="nav-item page-scroll nav-item-custom "> <a class="nav-link smooth-scroll" href="index.html#sponsors">SPONSORS</a> </li>
                 <!-- <li class="nav-item page-scroll nav-item-custom active"> <a class="nav-link smooth-scroll" href="#sponsors">CONTESTS</a> </li>-->
                 <!--<li class="nav-item page-scroll nav-item-custom active"> <a class="nav-link smooth-scroll" href="#register">REGISTER</a> </li> -->
-                <li class="nav-item page-scroll nav-item-custom"><a class="nav-link smooth-scroll"
-                                                                    href="index.html#aboutus">ABOUT US</a></li>
+                <li class="nav-item page-scroll nav-item-custom"> <a class="nav-link smooth-scroll" href="index.html#aboutus">ABOUT US</a> </li>
             </ul>
         </div>
     </nav>
@@ -392,7 +387,7 @@
                         <div class="form-group row" style="margin-top: 20px;" id="firstmember">
                             <label for="homepage-email-1" class="col-md-2 col-form-label">Participant 1</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" placeholder="Email ID" id="homepage-email-1">
+                                <input class="form-control" type="text" placeholder="Email ID" id="homepage-email-1" onblur="homepageEmail(1)">
                             </div>
                         </div>
 
@@ -512,7 +507,7 @@
                         <div class="form-group row" style="margin-top: 20px;" id="lfirstmember">
                             <label for="launch-email-1" class="col-md-2 col-form-label">Participant 1</label>
                             <div class="col-md-10">
-                                <input class="form-control" type="text" placeholder="Email ID" id="launch-email-1">
+                                <input class="form-control" type="text" placeholder="Email ID" id="launch-email-1" onblur="launchEmail(1)">
                             </div>
                         </div>
 
@@ -928,10 +923,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+<script src="js/contestTeamRegister.js"></script>
 <script src="js/contest.js"></script>
 <script src="js/validator.js"></script>
 <script src="js/contestRegister.js"></script>
-<script src="js/contestTeamRegister.js"></script>
+
 
 <!--
 

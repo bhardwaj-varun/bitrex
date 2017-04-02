@@ -54,7 +54,7 @@ function l_add_fields() {
         var objTo = document.getElementById('l_additionalFields');
         var divtest = document.createElement("div");
         var x = l_info + 1;
-        divtest.innerHTML = '<div  class="row l-warn"><div class="col-8 offset-2"><span id="span-launch-email'+ x +'-warn"  style="color:red; font-size: 12px; padding-bottom: 8px;"></span></div></div><div class="form-group row l" style="margin-top: 20px;"><label for="launch-email-' + x + '" class="col-2 col-form-label">Participant ' + x + '</label><div class="col-10"><input class="form-control" type="text" placeholder="Email ID" id="launch-email-' + x + '"></div></div>';
+        divtest.innerHTML = '<div  class="row l-warn"><div class="col-8 offset-2"><span id="span-launch-email'+ x +'-warn"  style="color:red; font-size: 12px; padding-bottom: 8px;"></span></div></div><div class="form-group row l" style="margin-top: 20px;"><label for="launch-email-' + x + '" class="col-2 col-form-label">Participant ' + x + '</label><div class="col-10"><input class="form-control" type="text" placeholder="Email ID" id="launch-email-' + x + '" onblur="launchEmail('+ x +')"></div></div>';
         console.log(divtest.innerHTML)
         objTo.appendChild(divtest);
         l_info++;
@@ -88,7 +88,7 @@ function add_fields() {
         var objTo = document.getElementById('additionalFields');
         var divtest = document.createElement("div");
         var x = info + 1;
-        divtest.innerHTML = '<div class="row p-warn"><div class="col-8 offset-2"><span id="span-homepage-email'+ x +'-warn" style="color:red; font-size: 12px; padding-bottom: 8px;"></span></div></div><div class="form-group row p" style="margin-top: 20px;"><label for="homepage-email-' + x + '" class="col-2 col-form-label">Participant ' + x + '</label><div class="col-10"><input class="form-control" type="text" placeholder="Email ID" id="homepage-email-' + x + '"></div></div>';
+        divtest.innerHTML = '<div class="row p-warn"><div class="col-8 offset-2"><span id="span-homepage-email'+ x +'-warn" style="color:red; font-size: 12px; padding-bottom: 8px;"></span></div></div><div class="form-group row p" style="margin-top: 20px;"><label for="homepage-email-' + x + '" class="col-2 col-form-label">Participant ' + x + '</label><div class="col-10"><input class="form-control" type="text" placeholder="Email ID" id="homepage-email-' + x + '" onblur="homepageEmail('+x+')"></div></div>';
         console.log(divtest.innerHTML);
         objTo.appendChild(divtest);
         info++;

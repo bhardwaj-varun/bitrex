@@ -55,7 +55,7 @@ $message=<<<EOF
 </html>
 EOF;
 
-mail($to,$sub,$message,$headers)
+mail($to,$sub,$message,$headers);
 
 
 ?>
