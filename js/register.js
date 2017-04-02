@@ -25,7 +25,7 @@ $(document).ready(function () {
    });
 });
 var validateRegFormFilled=function () {
-    var flag=1;
+  /*  var flag=1;
     var text=$('#register-name').val().trim();
     var result=validateName(text);
     flag &= result ? 1:0;
@@ -44,7 +44,7 @@ var validateRegFormFilled=function () {
     text=$('#register-address').val().trim();
     result=validateAddress(text);
     flag &= result ? 1:0;
-    return flag;
+    return flag;*/
 
 };
 var validateRegForm=function () {
