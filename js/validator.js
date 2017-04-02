@@ -1,6 +1,6 @@
 var reg_name=/[a-zA-Z .]/g
 var reg_email=/^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-var reg_phone=/^([987]{1}[0-9]{9})/g;
+var reg_phone=/[0-9]{10}/g;
 var reg_address=/[a-zA-Z ,\-/]/g;
 var reg_team=/[a-zA-Z0-9_ ]/g;
 var reg_col_uni_course=/[a-zA-Z, .+]/g;

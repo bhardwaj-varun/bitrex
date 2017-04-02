@@ -1,9 +1,8 @@
-var flag=0;
 $(document).ready(function () {
+    $("#modal-payment").modal('toggle');
     validateRegForm();
    $(document).on('click','#submit-register',function (e) {
        e.preventDefault();
-
        var info={
                     name:$('#register-name').val().trim(),
                     email:$('#register-email').val().trim(),
@@ -19,21 +18,42 @@ $(document).ready(function () {
        };
        info=JSON.stringify(info);
        //console.log(info);
-       if(flag)
+       if(validateRegFormFilled())
         registerFest(info);
        else
            alert('Fill all fields first');
 
    });
 });
+var validateRegFormFilled=function () {
+    var flag=1;
+    var text=$('#register-name').val().trim();
+    var result=validateName(text);
+    flag &= result ? 1:0;
+    text=$('#register-email').val().trim();
+    result=validateEmail(text);
+    flag &= result ? 1:0;
+    text=$('#register-phone').val().trim();
+    result=validatePhone(text);
+    flag &= result ? 1:0;
+    text=$('#register-university').val().trim();
+    result=ValidateCollege(text);
+    flag &= result ? 1:0;
+    text=$('#register-college').val().trim();
+    result=ValidateCollege(text);
+    flag &= result ? 1:0;
+    text=$('#register-address').val().trim();
+    result=validateAddress(text);
+    flag &= result ? 1:0;
+    return flag;
+
+};
 var validateRegForm=function () {
 
-    $(document).on('blur','#register-name',function (e) {
+    $(document).on('focusout','#register-name',function (e) {
         flag=1;
         var text=$('#register-name').val().trim();
         var result=validateName(text);
-        flag &= result ? 1:0;
-       // alert(result+' '+flag);
         if(!result){
             $('#register-name-warn').html('Invalid Symbols in Name');
         }
@@ -41,11 +61,9 @@ var validateRegForm=function () {
             $('#register-name-warn').html('');
         }
     });
-    $(document).on('blur','#register-email',function (e) {
+    $(document).on('focusout','#register-email',function (e) {
         var text=$('#register-email').val().trim();
         var result=validateEmail(text);
-        flag &= result ? 1:0;
-       // alert(result+' '+flag);
         if(!result){
             $('#register-email-warn').html('Invalid Email ID');
         }
@@ -53,11 +71,9 @@ var validateRegForm=function () {
             $('#register-email-warn').html('');
         }
     });
-    $(document).on('blur','#register-phone',function (e) {
+    $(document).on('focusout','#register-phone',function (e) {
         var text=$('#register-phone').val().trim();
         var result=validatePhone(text);
-        flag &= result ? 1:0;
-       // alert(result+' '+flag);
         if(!result){
 
             $('#register-phone-warn').html('Invalid Mobile No');
@@ -67,12 +83,9 @@ var validateRegForm=function () {
         }
 
     });
-    $(document).on('blur','#register-university',function (e) {
+    $(document).on('focusout','#register-university',function (e) {
         var text=$('#register-university').val().trim();
         var result=ValidateCollege(text);
-
-        flag &= result ? 1:0;
-       // alert(result+' '+flag);
         if(!result){
             $('#register-university-warn').html('Invalid Symbols in University Name');
         }
@@ -80,12 +93,9 @@ var validateRegForm=function () {
             $('#register-university-warn').html('');
         }
     });
-    $(document).on('blur','#register-college',function (e) {
+    $(document).on('focusout','#register-college',function (e) {
         var text=$('#register-college').val().trim();
         var result=ValidateCollege(text);
-
-        flag &= result ? 1:0;
-        //alert(result+' '+flag);
         if(!result){
             $('#register-college-warn').html('Invalid Symbols in college Name');
         }
@@ -93,12 +103,9 @@ var validateRegForm=function () {
             $('#register-college-warn').html('');
         }
     });
-    $(document).on('blur','#register-course',function (e) {
+    $(document).on('focusout','#register-course',function (e) {
         var text=$('#register-course').val().trim();
         var result=ValidateCollege(text);
-
-        flag &= result ? 1:0;
-        //alert(result+' '+flag);
         if(!result){
             $('#register-course-warn').html('Invalid Symbols in Course Name');
         }
@@ -106,12 +113,9 @@ var validateRegForm=function () {
             $('#register-course-warn').html('');
         }
     });
-    $(document).on('blur','#register-address',function (e) {
+    $(document).on('focusout','#register-address',function (e) {
         var text=$('#register-address').val().trim();
         var result=validateAddress(text);
-
-        flag &= result ? 1:0;
-        //alert(result+' '+flag);
         if(!result){
             $('#register-address-warn').html('Invalid Symbols in address Name');
         }
