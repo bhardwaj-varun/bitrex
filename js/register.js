@@ -164,7 +164,8 @@ var registerFest = function(info){
                  if($("#isc").is(':checked')){
 
                      if($('#register-include-tshirt').is(':checked')) {
-                         $('#cost').html('300');
+                         $('#cost').html('Pay <i class="fa fa-inr"></i> 300 (T-shirt  Cost)');
+                         $('#cost').css('font-size','20px');
                          $('#modal-payment').modal('toggle');
                      }
                      else {
@@ -173,12 +174,12 @@ var registerFest = function(info){
                  }
                  else{
                      if($('#register-include-tshirt').is(':checked')) {
-
-                         $('#cost').html('500');
-                         $('#modal-payment').modal('toggle');
+                          $('#cost').html('Pay <i class="fa fa-inr"></i> 200(Registration Fee) + <i class="fa fa-inr"></i> 300(T-shirt)');
+                          $('#cost').css('font-size','15px');
+                          $('#modal-payment').modal('toggle');
                      }
                      else {
-                         $('#cost').html('200');
+                         $('#cost').html('Pay <i class="fa fa-inr"></i> 200 (Registration Fee)');
                          $("#modal-payment").modal('toggle');
                      }
                  }

@@ -122,6 +122,7 @@ var registerEvent = function(info){
         success:function(response){
             //alert(response);
             //console.log(response);
+            jsondata=$.parseJSON(response);
             if(jsondata.msg){
                 $("#text").html(jsondata.msg);
             }else{
