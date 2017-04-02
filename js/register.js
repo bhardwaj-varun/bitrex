@@ -158,7 +158,7 @@ var registerFest = function(info){
         data:info,
         async:true,
         success:function(response){
-            //console.log(response);
+            console.log(response);
              jsondata=$.parseJSON(response);
              if(jsondata.msg){
                  if($("#isc").is(':checked')){
