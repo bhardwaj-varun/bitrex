@@ -92,6 +92,7 @@ class Register implements Constants {
         else if($this ->isISC==0 && $this->regtype==2 ){
             $mail->setPayment(1,500);
         }
+        $mail->setMessage();
         $mail->setTo($this->email);
         $mail->setSubject("BITREX'17 | REGISTRATION");
         $mail->sendMail();

@@ -11,9 +11,9 @@ class Mail
 
     public function __construct()
     {
-        $this->headers = 'MIME-Version: 1.0' . "\r\n";
-        $this->headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $this->headers .= 'From: Bitrex<noreply@bitrex.in>' . "\r\n";
+        $this->headers ='MIME-Version: 1.0' . "\r\n";
+        $this->headers .='Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $this->headers .='From: Bitrex<noreply@bitrex.in>' . "\r\n";
     }
 
     public function setMessage(){
