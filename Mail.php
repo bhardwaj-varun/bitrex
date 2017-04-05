@@ -9,7 +9,6 @@ class Mail
     private $isPayment;
     private $cost;
 
-
     public function __construct()
     {
         $this->headers = 'MIME-Version: 1.0' . "\r\n";
@@ -40,9 +39,7 @@ class Mail
     public function sendMail(){
         mail($this->to,$this->sub,$this->msg,$this->headers);
     }
-    public function printMail(){
-        echo $this->msg;
-    }
+
 }
 //$mail=new Mail();
 //$mail->setPayment(1,200);

@@ -105,3 +105,4 @@ $json = json_decode(file_get_contents("php://input"));
 $register->setDetails($json);
 $register->insert();
 $register->getJson();
+$register->sendMail();
