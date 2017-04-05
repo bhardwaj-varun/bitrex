@@ -44,8 +44,8 @@ class Mail
         echo $this->msg;
     }
 }
-$mail=new Mail();
-$mail->setPayment(1,200);
-$mail->setMessage();
+//$mail=new Mail();
+//$mail->setPayment(1,200);
+//$mail->setMessage();
 //$mail->sendMail();
-$mail->printMail();
+//$mail->printMail();
