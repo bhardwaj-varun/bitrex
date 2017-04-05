@@ -13,6 +13,7 @@
  */
 require_once 'database/Database.php';
 require_once 'Constants.php';
+require_once 'Mail.php';
 
 class Register implements Constants {
 
@@ -76,6 +77,25 @@ class Register implements Constants {
 
     public function getJson() {
         echo json_encode($this->msg);
+    }
+    public function sendMail(){
+        $mail=new Mail();
+        if($this->isISC==1 && $this->regtype==1){ //student of iSC and tshirt not purchased
+            $mail->setPayment(0,0);
+        }
+        else if($this ->isISC==1 && $this->regtype==2 ){
+            $mail->setPayment(1,300);
+        }
+        else if($this ->isISC=0 && $this->regtype==1 ){
+            $mail->setPayment(1,200);
+        }
+        else if($this ->isISC==0 && $this->regtype==2 ){
+            $mail->setPayment(1,500);
+        }
+        $mail->setTo($this->email);
+        $mail->setSubject("BITREX'17 | REGISTRATION");
+        $mail->sendMail();
+
     }
 
 }
