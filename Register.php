@@ -72,6 +72,9 @@ class Register implements Constants {
                 $this->msg = array("err" => 'error in inserting tshirt info');
                 }
            }
+           else{
+               $this->msg = array('msg' => 'info & tshirt inserted successfully');
+           }
         } else {
             $this->msg = array("err" => 'Email already Exists.');
         }
