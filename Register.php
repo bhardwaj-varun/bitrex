@@ -64,17 +64,18 @@ class Register implements Constants {
     public function insert() {
         $this->InsertParticipantsInfo();
        if ($this->resultParticipantInfo['row_count'] == 1 ) {
+           if($this->regtype==2){
             $this->InsertTshirtInfo();
-            if ($this->resultTshirtInfo['row_count'] == 1) {
+                if ($this->resultTshirtInfo['row_count'] == 1) {
                 $this->msg = array('msg' => 'info & tshirt inserted successfully');
-            } else {
+                } else {
                 $this->msg = array("err" => 'error in inserting tshirt info');
-            }
+                }
+           }
         } else {
             $this->msg = array("err" => 'Email already Exists.');
         }
     }
-
     public function getJson() {
         echo json_encode($this->msg);
     }
