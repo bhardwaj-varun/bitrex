@@ -711,10 +711,10 @@ or checkout our contests page&nbsp;https://bitrex.in/contest.html</p>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; line-height: 200%;">
                         
-                            <div style="text-align: center;"><span style="font-size:17px">See you at the fest.</span></div>
+                            <div style="text-align: center;"><span style="font-size:17px">See you at the fest on 7th April at 9 AM.</span></div>
 
                         </td>
-                    </tr>
+                    </tr
                 </tbody></table>
 				<!--[if mso]>
 				</td>
