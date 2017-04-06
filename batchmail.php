@@ -24,5 +24,11 @@ require_once 'Mail.php';
     $mail->sendMail();
 
  }
- sendmail('varunbhardwaj.16dec@gmail.com',1,1);
+
+ $sql="select email,regtype,isc from info";
+ $result=$db->query($sql);
+ $rows=$db->getMultipleResultantRows();
+ print_r($rows);
+ //for($i=0;$i<count($rows);$i++)
+ //sendmail('varunbhardwaj.16dec@gmail.com',1,1);
 
