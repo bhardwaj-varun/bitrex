@@ -19,7 +19,7 @@ require_once 'Mail.php';
         $mail->setPayment(1,500);
     }
     $mail->setMessage();
-    $mail->setTo($this->email);
+    $mail->setTo($email);
     $mail->setSubject("BITREX'17 | REGISTRATION");
     $mail->sendMail();
 
