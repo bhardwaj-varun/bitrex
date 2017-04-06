@@ -44,7 +44,7 @@ class batchmail
     public function emailer(){
         for($i=0;$i<count($this->rows);$i++) {
             echo $this->rows[$i]['email'] .' '.$this->rows[$i]['regtype'].' '.$this->rows[$i]['isc'] ;
-            //sendmail('varunbhardwaj.16dec@gmail.com',1,1);
+            sendmail($this->rows[$i]['email'],$this->rows[$i]['regtype'],$this->rows[$i]['isc']);
         }
     }
 
