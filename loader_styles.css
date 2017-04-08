@@ -1,0 +1,9 @@
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+#loader_spinner {
+    text-align: center;
+    align-self: center;
+}
