@@ -68,12 +68,15 @@ class Register implements Constants {
             $this->InsertTshirtInfo();
                 if ($this->resultTshirtInfo['row_count'] == 1) {
                 $this->msg = array('msg' => 'info & tshirt inserted successfully');
+                    $this->sendMail();
                 } else {
+
                 $this->msg = array("err" => 'error in inserting tshirt info');
                 }
            }
            else{
                $this->msg = array('msg' => 'info & tshirt inserted successfully');
+               $this->sendMail();
            }
         } else {
             $this->msg = array("err" => 'Email already Exists.');
@@ -110,4 +113,3 @@ $json = json_decode(file_get_contents("php://input"));
 $register->setDetails($json);
 $register->insert();
 $register->getJson();
-$register->sendMail();
