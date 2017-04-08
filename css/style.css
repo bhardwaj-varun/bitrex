@@ -165,7 +165,9 @@ a :focus {
     
     .text-center {
     }
-
+    .jumbo-custom {
+    	margin-top: 50px;
+    }
     
 }
 
