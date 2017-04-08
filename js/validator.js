@@ -22,15 +22,15 @@ var validateEmail=function(text){
 var validateTeamName=function(text){
     var res=reg_team.test(text);
     //console.log(res);
-    return res;
+    return true;
 };
 var validateAddress=function(text){
     var res=reg_address.test(text);
     //console.log(res);
-    return res;
+    return true;
 };
 var validateCollege=function (text) {
     var res=reg_col_uni_course.test(text);
     //console.log(res);
-    return res;
+    return true;
 };
