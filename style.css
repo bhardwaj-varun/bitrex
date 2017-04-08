@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+body {
+    font-family: 'Lato', 'sans-serif';
+    overflow-x: hidden;
+    background-color:#E6E6E6;
+}
+
+
+.diagonal-split-background{
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(30deg, #0F2452 50%, black  50%);
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+
+
+
+
+#img_row > .col-md-1 {
+    border: 1px solid #292B2C;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+#navbar_main {
+    background:#375A7F;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open > .nav-link
+{
+    color: white;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+    
+    color: white;
+}
+
+
+
+@media (max-width: 767px) {
+    .scale-down {
+        font-size: 56px;
+        text-align: center;
+    }  
+    
+
+    .contests-scale-down {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+@font-face {
+    font-family: 'bitlow';
+    src: url(font/bitlow.ttf);
+}
+.bitlow-font {
+    font-family: bitlow;
+}
